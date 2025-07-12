@@ -10,24 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-    - name: Setup Ruby (for Jekyll)
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.1
+      - name: Setup Ruby (for Jekyll)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
 
-    - name: Install dependencies
-      run: |
-        gem install bundler
-        bundle install
+      - name: Update Bundler
+        run: gem install bundler -v 2.4.13
 
-    - name: Build the site with Jekyll
-      run: bundle exec jekyll build
+      - name: Install dependencies
+        run: bundle install
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.PERSONAL_TOKEN }}
-        publish_dir: ./_site
+      - name: Build the site with Jekyll
+        run: bundle exec jekyll build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
