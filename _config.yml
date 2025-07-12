@@ -1,5 +1,5 @@
 title: Celia's Cloud Notebook
-description: Technical notes on Cloud, SRE, Open Source, and Data
+description: Technical notes on SRE, Data, Cloud, and Open Source
 theme: just-the-docs
 color_scheme: light
 
@@ -10,6 +10,8 @@ aux_links:
   GitHub: https://github.com/celialovesdata/nube.tech
 
 nav_sort: case_insensitive
+
+# footer_content: "© 2025 Celia's Cloud Notebook"
 
 # 導覽設定
 just_the_docs:

@@ -3,14 +3,17 @@ title: Home
 nav_order: 1
 ---
 
-# 🌐 Celia's Cloud Notebook
+# ☁️ Welcome
 
-Welcome to my cloud/SRE/data notebook.
+This is my personal tech notebook on:
 
-Use the sidebar to explore:
+- Cloud
+- SRE
+- Open Source
+- Data
 
-- [Notes](notes.md)
-- [Projects](projects.md)
+Explore using the sidebar.
+
 
 # ☁️ Welcome to nube.tech
 
