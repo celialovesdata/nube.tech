@@ -21,6 +21,9 @@ jobs:
       - name: Update Bundler
         run: gem install bundler -v 2.4.13
 
+      - name: Use new Bundler to install
+        run: bundle _2.4.13_ install        
+
       - name: Install dependencies
         run: bundle install
 
