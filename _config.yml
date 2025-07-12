@@ -1,6 +1,18 @@
 title: Celia's Cloud Notebook
-description: A technical showcase
-baseurl: "/nube.tech"
-url: "https://celialovesdata.github.io"
-theme: minima
+description: Technical notes on Cloud, SRE, Open Source, and Data
+theme: just-the-docs
+color_scheme: light
 
+url: "https://celialovesdata.github.io"
+baseurl: "/nube.tech"
+
+aux_links:
+  GitHub: https://github.com/celialovesdata/nube.tech
+
+nav_sort: case_insensitive
+
+# 導覽設定
+just_the_docs:
+  logo: false
+  search_enabled: true
+  show_last_modified_time: true
