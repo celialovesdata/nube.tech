@@ -15,6 +15,8 @@ An automated, browser-based sandbox environment that demonstrates the power of *
 
 ### 📺 Watch the Demo
 
+![Nube Lab Demo](./assets/iac-nginx.gif)
+
 ![Nube Lab Demo](https://private-user-images.githubusercontent.com/22863089/562708316-1addff7e-b52d-408b-bb5b-4159bbf94269.gif)
 
 ### 🛠️ Key Features
