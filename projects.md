@@ -17,8 +17,6 @@ An automated, browser-based sandbox environment that demonstrates the power of *
 
 ![Nube Lab Demo](./assets/iac-nginx.gif)
 
-![Nube Lab Demo](https://private-user-images.githubusercontent.com/22863089/562708316-1addff7e-b52d-408b-bb5b-4159bbf94269.gif)
-
 ### 🛠️ Key Features
 * **Zero-Config Environment**: Uses GitHub DevContainers to pre-configure a stable Ubuntu environment with Terraform and Docker pre-installed.
 * **One-Click Deployment**: Automates the pull of Nginx images and container orchestration via a single `terraform apply`.
