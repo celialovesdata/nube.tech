@@ -43,18 +43,32 @@
   },"6": {
     "doc": "Projects",
     "title": "🚀 Projects Showcase",
-    "content": "This is where I will list my open source or personal projects. ",
+    "content": "This page features my personal projects and open-source contributions, focusing on Infrastructure-as-Code (IaC), Automation, and Cloud-native solutions. ",
     "url": "/nube.tech/projects.html#-projects-showcase",
     
     "relUrl": "/projects.html#-projects-showcase"
   },"7": {
+    "doc": "Projects",
+    "title": "☁️ Nube.Tech PaaS Interactive Lab",
+    "content": "An automated, browser-based sandbox environment that demonstrates the power of Infrastructure as Code. This project allows users to spin up a fully functional cloud development workspace with a single command. 📺 Watch the Demo . 🛠️ Key Features . | Zero-Config Environment: Uses GitHub DevContainers to pre-configure a stable Ubuntu environment with Terraform and Docker pre-installed. | One-Click Deployment: Automates the pull of Nginx images and container orchestration via a single terraform apply. | Dynamic Networking: Automatically handles port forwarding and generates a public URL for the deployed service. | PaaS Simulation: Provides a “PaaS-like” experience (similar to Heroku or Vercel) for backend infrastructure. | . 💻 Technical Stack . | Category | Technology | :— | :— | Orchestration | Terraform (HashiCorp) | Containerization | Docker (Docker-in-Docker) | Environment | GitHub Codespaces / DevContainers | OS Support | Ubuntu 22.04 LTS (Jammy) | . 🔒 Access Note . Demo Restricted: To maintain security and resource quotas, the source repository is currently set to Private. Contact the owner for a live demonstration or architectural walkthrough. ",
+    "url": "/nube.tech/projects.html#%EF%B8%8F-nubetech-paas-interactive-lab",
+    
+    "relUrl": "/projects.html#️-nubetech-paas-interactive-lab"
+  },"8": {
+    "doc": "Projects",
+    "title": "📂 Other Projects",
+    "content": "Coming soon… . Back to Home . ",
+    "url": "/nube.tech/projects.html#-other-projects",
+    
+    "relUrl": "/projects.html#-other-projects"
+  },"9": {
     "doc": "Projects",
     "title": "Projects",
     "content": " ",
     "url": "/nube.tech/projects.html",
     
     "relUrl": "/projects.html"
-  },"8": {
+  },"10": {
     "doc": "Security Policy",
     "title": "Security Policy",
     "content": "# Security Policy ## Supported Versions Use this section to tell people about which versions of your project are currently being supported with security updates. | Version | Supported | ------- | ------------------ | 5.1.x | :white_check_mark: | 5.0.x | :x: | 4.0.x | :white_check_mark: | < 4.0 | :x: | ## Reporting a Vulnerability Use this section to tell people how to report a vulnerability. Tell them where to go, how often they can expect to get an update on a reported vulnerability, what to expect if the vulnerability is accepted or declined, etc. ",
