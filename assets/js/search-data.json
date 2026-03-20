@@ -29,46 +29,60 @@
   },"4": {
     "doc": "Notes",
     "title": "🧠 Technical Notes",
-    "content": "This is where I will write notes about SRE, Docker, Kubernetes, and more. ",
+    "content": " ",
     "url": "/nube.tech/notes.html#-technical-notes",
     
     "relUrl": "/notes.html#-technical-notes"
   },"5": {
+    "doc": "Notes",
+    "title": "☸️ Kubernetes &amp; GitOps: The Enterprise Blueprint",
+    "content": "🚀 Google Kubernetes Engine (GKE) Pipeline . In March 2026, I successfully engineered a full-scale CI/CD pipeline using Cloud Build and GKE, centered around a sophisticated Decoupled GitOps Architecture. | Dual-Repository Strategy: By isolating the app source code from the env Kubernetes manifests, I established a clear Separation of Concerns. This prevents accidental configuration drift and ensures a robust, auditable path-to-production. | End-to-End Automation (IaC): Architected a seamless flow from docker build to Artifact Registry promotion, followed by automated manifest reconciliation via kubectl. | Security Hardening: Implemented Google Secret Manager to securely inject GitHub SSH keys during runtime, achieving a “zero-cleartext” environment for all sensitive build assets. | . 🏗️ GitOps Implementation Strategy . | Infrastructure: Regional GKE Cluster for High Availability (HA). | Orchestration: Google Cloud Build with custom cloudbuild.yaml logic. | Registry: Google Artifact Registry with immutable image tagging. | CD Logic: Leveraged dynamic manifest rendering via sed to automate environment-specific deployments, triggering downstream CD in the environment repository. | . 🛠️ SRE Post-Mortem: Real-world Troubleshooting . | Authentication Resiliency: Diagnosed and resolved 401 Bad Credentials during headless initialization. Insight: Prioritize token-based authentication (gh auth login --with-token) over interactive sessions to maintain idempotent provisioning scripts. | Stateful Provisioning: Navigated the latency of GKE PROVISIONING cycles. Best Practice: Implemented robust state polling and handled HTTP 409 (Conflict) errors, ensuring that the automation remains Idempotent and resilient to retries. | . Last updated: March 2026 . ",
+    "url": "/nube.tech/notes.html#%EF%B8%8F-kubernetes--gitops-the-enterprise-blueprint",
+    
+    "relUrl": "/notes.html#️-kubernetes--gitops-the-enterprise-blueprint"
+  },"6": {
     "doc": "Notes",
     "title": "Notes",
     "content": " ",
     "url": "/nube.tech/notes.html",
     
     "relUrl": "/notes.html"
-  },"6": {
+  },"7": {
     "doc": "Projects",
     "title": "🚀 Projects Showcase",
     "content": "This page features my personal projects and open-source contributions, focusing on Infrastructure-as-Code (IaC), Automation, and Cloud-native solutions. ",
     "url": "/nube.tech/projects.html#-projects-showcase",
     
     "relUrl": "/projects.html#-projects-showcase"
-  },"7": {
+  },"8": {
+    "doc": "Projects",
+    "title": "☸️ Google Kubernetes Engine GitOps Pipeline",
+    "content": "An automated CI/CD implementation showcasing GitOps principles on Google Cloud Platform. This project demonstrates how to decouple application source code from environment configurations to ensure a secure, auditable, and scalable deployment workflow. 🔗 View Repository . 🛠️ Key Features . | Decoupled Architecture: Utilizes a two-repo strategy (App repo &amp; Env repo) to prevent environment drift and maintain a clean audit trail. | Automated CI/CD: Leverages Google Cloud Build for unit testing, containerization, and dynamic manifest rendering using sed. | GitOps Release Workflow: Implements a candidate/production branch strategy, allowing for safe deployment attempts and instant rollbacks. | Cloud-Native Security: Integrates Secret Manager for SSH deploy keys and Artifact Registry for immutable image versioning. | . 💻 Technical Stack . | Category | Technology | . | Orchestration | Google Kubernetes Engine (GKE) | . | CI/CD Engine | Google Cloud Build | . | Registry | Google Artifact Registry | . | Secret Mgmt | Google Secret Manager | . ",
+    "url": "/nube.tech/projects.html#%EF%B8%8F-google-kubernetes-engine-gitops-pipeline",
+    
+    "relUrl": "/projects.html#️-google-kubernetes-engine-gitops-pipeline"
+  },"9": {
     "doc": "Projects",
     "title": "☁️ Nube.Tech PaaS Interactive Lab",
     "content": "An automated, browser-based sandbox environment that demonstrates the power of Infrastructure as Code. This project allows users to spin up a fully functional cloud development workspace with a single command. 📺 Watch the Demo . 🛠️ Key Features . | Zero-Config Environment: Uses GitHub DevContainers to pre-configure a stable Ubuntu environment with Terraform and Docker pre-installed. | One-Click Deployment: Automates the pull of Nginx images and container orchestration via a single terraform apply. | Dynamic Networking: Automatically handles port forwarding and generates a public URL for the deployed service. | PaaS Simulation: Provides a “PaaS-like” experience for backend infrastructure. | . 💻 Technical Stack . | Category | Technology | . | Orchestration | Terraform (HashiCorp) | . | Containerization | Docker (Docker-in-Docker) | . | Environment | GitHub Codespaces / DevContainers | . | OS Support | Ubuntu 22.04 LTS (Jammy) | . 🔒 Access Note . Demo Restricted: To maintain security and resource quotas, the source repository is currently set to Private. Contact the owner for a live demonstration or architectural walkthrough. ",
     "url": "/nube.tech/projects.html#%EF%B8%8F-nubetech-paas-interactive-lab",
     
     "relUrl": "/projects.html#️-nubetech-paas-interactive-lab"
-  },"8": {
+  },"10": {
     "doc": "Projects",
     "title": "📂 Other Projects",
     "content": "Coming soon… . Back to Home . ",
     "url": "/nube.tech/projects.html#-other-projects",
     
     "relUrl": "/projects.html#-other-projects"
-  },"9": {
+  },"11": {
     "doc": "Projects",
     "title": "Projects",
     "content": " ",
     "url": "/nube.tech/projects.html",
     
     "relUrl": "/projects.html"
-  },"10": {
+  },"12": {
     "doc": "Security Policy",
     "title": "Security Policy",
     "content": "# Security Policy ## Supported Versions Use this section to tell people about which versions of your project are currently being supported with security updates. | Version | Supported | ------- | ------------------ | 5.1.x | :white_check_mark: | 5.0.x | :x: | 4.0.x | :white_check_mark: | < 4.0 | :x: | ## Reporting a Vulnerability Use this section to tell people how to report a vulnerability. Tell them where to go, how often they can expect to get an update on a reported vulnerability, what to expect if the vulnerability is accepted or declined, etc. ",
