@@ -7,6 +7,30 @@ nav_order: 3
 
 This page features my personal projects and open-source contributions, focusing on Infrastructure-as-Code (IaC), Automation, and Cloud-native solutions.
 
+
+---
+
+## ☸️ Google Kubernetes Engine GitOps Pipeline
+
+An automated CI/CD implementation showcasing **GitOps principles** on Google Cloud Platform. This project demonstrates how to decouple application source code from environment configurations to ensure a secure, auditable, and scalable deployment workflow.
+
+### 🔗 [View Repository](https://github.com/celialovesdata/hello-cloudbuild-app)
+
+### 🛠️ Key Features
+* **Decoupled Architecture**: Utilizes a two-repo strategy (App repo & Env repo) to prevent environment drift and maintain a clean audit trail.
+* **Automated CI/CD**: Leverages **Google Cloud Build** for unit testing, containerization, and dynamic manifest rendering using `sed`.
+* **GitOps Release Workflow**: Implements a **candidate/production branch strategy**, allowing for safe deployment attempts and instant rollbacks.
+* **Cloud-Native Security**: Integrates **Secret Manager** for SSH deploy keys and **Artifact Registry** for immutable image versioning.
+
+### 💻 Technical Stack
+
+| Category | Technology |
+| :--- | :--- |
+| **Orchestration** | Google Kubernetes Engine (GKE) |
+| **CI/CD Engine** | Google Cloud Build |
+| **Registry** | Google Artifact Registry |
+| **Secret Mgmt** | Google Secret Manager |
+
 ---
 
 ## ☁️ Nube.Tech PaaS Interactive Lab
