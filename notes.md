@@ -30,17 +30,19 @@ In March 2026, I successfully engineered a full-scale CI/CD pipeline using **Clo
 
 ---
 
-### ❓ SRE Deep Dive: FAQ & Interview Prep
+### ❓ SRE Deep Dive: Operational Insights
 
-**Q: How do you verify a secret rotation was successful without changing code?** **A:** "Secret rotation is an **Out-of-Band change** that doesn't necessarily trigger a new commit in the repository's history. To verify the rotation, I monitor the **execution logs of the next CI/CD run**. By auditing the **Deployment Stage** for successful authentication handshakes, I can confirm that the new credentials stored in the **Secrets Vault** are being correctly injected into the runtime environment without needing to modify the workflow YAML itself."
+**Q: How do you verify a secret rotation was successful without changing code?**
+**A:** "Secret rotation is an **Out-of-Band change** that doesn't necessarily trigger a new commit in the repository's history. To verify the rotation, I monitor the **execution logs of the next CI/CD run**. By auditing the **Deployment Stage** for successful authentication handshakes, I can confirm that the new credentials stored in the **Secrets Vault** are being correctly injected into the runtime environment without needing to modify the workflow YAML itself."
 
-**Q: How do you recover a failed deployment due to credential issues?** **A:** "Once a credential issue is identified, such as an expired PAT, I follow a **Secret-First Remediation** strategy. I first rotate the secret in the Vault or GitHub Secrets, and then either **re-trigger the deployment via a Git push** or perform a **manual job re-run** in the CI/CD dashboard. This ensures that the new deployment cycle fetches the updated, valid credentials, restoring the pipeline to a healthy state without introducing code drift."
+**Q: How do you recover a failed deployment due to credential issues?**
+**A:** "Once a credential issue is identified, such as an expired PAT, I follow a **Secret-First Remediation** strategy. I first rotate the secret in the Vault or GitHub Secrets, and then either **re-trigger the deployment via a Git push** or perform a **manual job re-run** in the CI/CD dashboard. This ensures that the new deployment cycle fetches the updated, valid credentials, restoring the pipeline to a healthy state without introducing code drift."
 
 ---
 
 ### 🔗 Related Projects
-* [**Google Kubernetes Engine Pipeline (GitOps)**](projects.md#google-kubernetes-engine-pipeline-gitops)
-* [**Nube.Tech PaaS Interactive Lab**](projects.md#nube-tech-paas-interactive-lab)
+* [**Google Kubernetes Engine Pipeline (GitOps)**](projects.html#%EF%B8%8F-google-kubernetes-engine-gitops-pipeline)
+* [**Nube.Tech PaaS Interactive Lab**](projects.html#%EF%B8%8F-nubetech-paas-interactive-lab)
 
 ---
 *Last updated: March 20, 2026*
