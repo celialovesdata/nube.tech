@@ -29,14 +29,20 @@ In March 2026, I successfully engineered a full-scale CI/CD pipeline using **Clo
     * **Best Practice**: Implemented robust state polling and handled HTTP 409 (Conflict) errors, ensuring that the automation remains **Idempotent** and resilient to retries.
 
 ---
-
 ### ❓ SRE Deep Dive: Operational Insights
 
-**Q: How do you verify a secret rotation was successful without changing code?**
-**A:** "Secret rotation is an **Out-of-Band change** that doesn't necessarily trigger a new commit in the repository's history. To verify the rotation, I monitor the **execution logs of the next CI/CD run**. By auditing the **Deployment Stage** for successful authentication handshakes, I can confirm that the new credentials stored in the **Secrets Vault** are being correctly injected into the runtime environment without needing to modify the workflow YAML itself."
+**Q1: How do you ensure only high-quality code reaches your GKE cluster?**
+**A:** "I implement a **Multi-Stage CI Pipeline** where the initial step is a mandatory **Unit Testing Gate**. By utilizing specialized test environments (e.g., Python Slim), I ensure that logic errors trigger a pipeline failure before containerization begins. Furthermore, I enforce **Image Immutability** by tagging builds with the `$SHORT_SHA`, ensuring the Artifact Registry remains a reliable source of truth."
 
-**Q: How do you recover a failed deployment due to credential issues?**
-**A:** "Once a credential issue is identified, such as an expired PAT, I follow a **Secret-First Remediation** strategy. I first rotate the secret in the Vault or GitHub Secrets, and then either **re-trigger the deployment via a Git push** or perform a **manual job re-run** in the CI/CD dashboard. This ensures that the new deployment cycle fetches the updated, valid credentials, restoring the pipeline to a healthy state without introducing code drift."
+**Q2: How do you recover a failed deployment due to credential issues?**
+**A:** "Once a credential issue is identified (e.g., an expired PAT), I follow a **Secret-First Remediation** strategy. I first rotate the secret in the Vault or GitHub Secrets, then either **re-trigger the deployment via a Git push** or perform a **manual job re-run**. This ensures the new deployment cycle fetches updated credentials, restoring the pipeline to a healthy state without introducing code drift."
+
+**Q3: How do you verify a secret rotation was successful without changing code?**
+**A:** "Secret rotation is an **Out-of-Band change** that doesn't trigger a new commit. To verify, I monitor the **execution logs of the next CI/CD run**. By auditing the **Deployment Stage** for successful authentication handshakes, I confirm that the new credentials from the **Secrets Vault** are correctly injected into the runtime environment without needing to modify the workflow YAML."
+
+**Q4: How do you share technical learnings with your team?**
+**A:** "I maintain a **Git-based Technical Notebook** (nube.tech). Every time I solve a complex infrastructure challenge—such as debugging OAuth handshakes or optimizing GKE provisioning—I document the **root cause and resolution**. This serves as a decentralized **Knowledge Base** that prevents redundant troubleshooting and improves our overall **MTTR** (Mean Time to Recovery)."
+
 
 ---
 
